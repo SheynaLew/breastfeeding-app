@@ -1,4 +1,5 @@
 import React from "react";
+import "./Titles.css"
 
 //export a default function called Title which takes in a text prop
 export default function Title ({text}) {
