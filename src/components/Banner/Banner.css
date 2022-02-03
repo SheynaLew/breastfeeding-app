@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Clicker+Script:regular");
+
+.banner {
+  height: 50px;
+  width: max-content;
+  background-color: #647079;
+  color: #c0e0ca;
+  font-family: "Clicker Script";
+}
