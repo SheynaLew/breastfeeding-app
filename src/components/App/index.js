@@ -5,6 +5,7 @@ import '../App/App.css';
 
 import Banner from '../Banner';
 import Calendars from "../Calenders";
+import Title from '../Titles';
 
 
 function App() {
@@ -13,9 +14,16 @@ function App() {
   return (
     <div className="App">
       <Banner/>
-      <div className="calendars">
-        <Calendars/>
-        <Calendars/>
+      <div className="calendarsContainer">
+        <div>
+          <Title text="Start Date" className="startDate"/>
+          <Calendars className="calendars"/>
+        </div>
+        <div>
+          <Title text="End Date" className="endDate"/>
+          <Calendars className="calendars"/>
+        </div>
+        
       </div>
       
     </div>
