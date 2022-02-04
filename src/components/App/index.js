@@ -13,7 +13,11 @@ function App() {
   return (
     <div className="App">
       <Banner/>
+      <div className="calendars">
         <Calendars/>
+        <Calendars/>
+      </div>
+      
     </div>
   );
 }
