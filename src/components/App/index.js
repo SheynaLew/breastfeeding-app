@@ -4,14 +4,25 @@ import '../App/App.css';
 // import 'react-calendar/dist/Calendar.css';
 
 import Banner from '../Banner';
+import Button from '../Button';
 import Calendars from "../Calenders";
 import Title from '../Titles';
 
+// handleClick={submit}
+
 
 function App() {
-  // const [value, onChange] = useState(new Date());
 
   return (
+  //   //useStates
+  //   const [startDate, setStartDate] = useState()
+  //   const [endDate, setEndDate] = useState()
+
+  //   //submit function for button click
+  //   function submit (){
+  //   setStartDate() 
+  //   }
+
     <div className="App">
       <Banner/>
       <div className="calendarsContainer">
@@ -23,11 +34,10 @@ function App() {
           <Title text="End Date" className="endDate"/>
           <Calendars className="calendars"/>
         </div>
-        
       </div>
-      
+      <Button  text={"submit"}/>
     </div>
-  );
+  ) 
 }
 
 export default App;

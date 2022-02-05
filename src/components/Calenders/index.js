@@ -10,6 +10,7 @@ export default function Calendars() {
     return (
       <div className="calendarCard">
         <Calendar onChange={onChange} value={value} className="calendar"/>
+        {console.log(value)}
       </div>
     );
 }
