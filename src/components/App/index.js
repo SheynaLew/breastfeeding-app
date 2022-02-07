@@ -43,7 +43,7 @@ function App() {
     }
   }
   function getBreastfeedingAward() {
-    //A function which takes the month difference (monthdiff function) and returns a breastfeeding award and text.
+    //A function which takes the month difference (monthDiff function) and returns a breastfeeding award and text.
     monthDiff()
   }
   
