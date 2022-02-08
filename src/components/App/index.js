@@ -9,6 +9,11 @@ import Banner from '../Banner';
 import Button from '../Button';
 // import Calendars from "../Calenders";
 import Title from '../Titles';
+import AwardImage from '../AwardImage';
+
+//import awardImages
+import amethyst from '../../images/amethyst.png';
+
 
 // handleClick={submit}
 
@@ -16,6 +21,8 @@ import Title from '../Titles';
 function App() {
   //calendar useState
   const [value, onChange] = useState(new Date());
+  const [awardURL, setAwardURL] = useState ("");
+  const [awardText, setAwardText] = useState("");
   // const [startTime, setStartTime] = useState(value);
   // const [endTime, setEndTime] = useState(value);
   // const [dateRange, setDateRange]  = useState(0);
@@ -45,6 +52,9 @@ function App() {
   function getBreastfeedingAward() {
     //A function which takes the month difference (monthDiff function) and returns a breastfeeding award and text.
     monthDiff()
+    setAwardURL(amethyst);
+    setAwardText("CONGRATULATIONS! You have been breastfeeding for 4 years! You have earned Amethyst boobs!")
+    return (awardURL, awardText)
   }
   
 
@@ -60,6 +70,9 @@ function App() {
         </div>
       </div>
       <Button handleClick={getBreastfeedingAward} text={"submit"}/>
+      <div className="award">
+        <AwardImage url={awardURL} altText={awardText}/>
+      </div>
     </div>
   ) 
 }
