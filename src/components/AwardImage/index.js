@@ -1,6 +1,6 @@
 import React from 'react';
 import './AwardImage.css';
 
-export default function AwardImage ({url, altText}) {
-return <img src={url} alt={altText}/>
+export default function AwardImage ({src, altText}) {
+return <img src={src} alt={altText}/>
 }

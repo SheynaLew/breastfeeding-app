@@ -75,5 +75,14 @@ const awards = [
         award_image: "../images/superstar.png",
         award_text_time: "5+ years",
         award_text_award: "SUPERSTAR BOOBS"
+      },
+      {
+        id: 12,
+        months_feeding: "<1",
+        award_image: "../../images/image-text.png",
+        award_text_time: "almost 1 month",
+        award_text_award: "Well done! You've almost reached your first breastfeeding award"
       }
     ]
+
+    export default awards;
