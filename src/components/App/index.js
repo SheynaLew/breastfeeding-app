@@ -52,7 +52,6 @@ function App() {
       range -=1;
       console.log(range)
     } else {
-      range = range
       console.log(range)
     }
 
@@ -126,18 +125,25 @@ function App() {
   return !showAward ? (
     <div className="App">
       <Banner/>
-      <div className="calendarsContainer">
-        <div>
-          <Title text="Journey Dates" className="startDate"/>
-          <div className="calendarCard">
-            <Calendar onChange={onChange} value={value} selectRange={true} className="calendar"/>
+      
+        <div className="calendarsContainer">
+          <div>
+          <Title text="Journey Dates" className="journeyDate"/>
+            <div className="calendarCard">
+              <Calendar onChange={onChange} value={value} selectRange={true} className="calendar"/>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="submitButton">
-        <Button handleClick={getBreastfeedingAward} text={"submit"}/>
-      </div>
-    
+        <div className="submitButton">
+          <Button handleClick={getBreastfeedingAward} text={"submit"}/>
+        </div>
+        <div className="feedingCalculator">
+          <div className="instructionsContainer">
+            <h1 className="instructions">Instructions</h1>
+            <p className="instructionsText">Enter the start date and end date of your feeding journey to find out which award you've achieved. If you're still feeding, your end date is today's date and your award will be the award you've achieved so far in your journey.</p>
+            <p className="instructionsText">Well done for getting this far in your feeding journey. Every drop of breastmilk is beneficial to your baby.</p>
+          </div>
+        </div>
     </div>
   ) : (
     <div className="award">
