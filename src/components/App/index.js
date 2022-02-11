@@ -25,11 +25,15 @@ import jade from '../../images/jade.png';
 import sapphire from '../../images/sapphire.png';
 import amethyst from '../../images/amethyst.png';
 import superstar from '../../images/superstar.png';
+import AwardTextTime from '../AwardTextTime';
 
 function App() {
   const [value, onChange] = useState(new Date());
   const [awardURL, setAwardURL] = useState ("");
+  const [textTime, setTextTime] = useState("");
   const [awardText, setAwardText] = useState("");
+  const [showAward, setShowAward] = useState(false);
+
 
 
   function getBreastfeedingAward() {
@@ -57,55 +61,69 @@ function App() {
     let spreadAwards=[...awards]
     if (range <1) {
       setAwardURL(imageText);
-      setAwardText(spreadAwards[11].award_text_award);
+      setTextTime(spreadAwards[11].award_text_time)
+      //setAwardText(spreadAwards[11].award_text_award);
+      
     } else if (range < 3) {
         setAwardURL(glitter);
+        setTextTime(spreadAwards[0].award_text_time)
         setAwardText(spreadAwards[0].award_text_award);
     }
       else if (range < 6) {
         setAwardURL(bronze);
+        setTextTime(spreadAwards[1].award_text_time)
         setAwardText(spreadAwards[1].award_text_award);
     }
       else if (range < 9) {
         setAwardURL(silver);
+        setTextTime(spreadAwards[2].award_text_time)
         setAwardText(spreadAwards[2].award_text_award);
     }
       else if (range < 12) {
         setAwardURL(ruby);
+        setTextTime(spreadAwards[3].award_text_time)
         setAwardText(spreadAwards[3].award_text_award);
     }
       else if (range < 18) {
         setAwardURL(gold);
+        setTextTime(spreadAwards[4].award_text_time)
         setAwardText(spreadAwards[4].award_text_award);
     }
       else if (range <24) {
         setAwardURL(platinum);
+        setTextTime(spreadAwards[5].award_text_time)
         setAwardText(spreadAwards[5].award_text_award);
     }
       else if (range < 30) {
         setAwardURL(diamond);
+        setTextTime(spreadAwards[6].award_text_time)
         setAwardText(spreadAwards[6].award_text_award);
     }
       else if (range < 36) {
         setAwardURL(jade);
+        setTextTime(spreadAwards[7].award_text_time)
         setAwardText(spreadAwards[7].award_text_award);
     }
       else if (range < 48) {
         setAwardURL(sapphire);
+        setTextTime(spreadAwards[8].award_text_time)
         setAwardText(spreadAwards[8].award_text_award);
     }
       else if (range < 60) {
         setAwardURL(amethyst);
+        setTextTime(spreadAwards[9].award_text_time)
         setAwardText(spreadAwards[9].award_text_award);
     }
       else if (range >= 60) {
         setAwardURL(superstar);
+        setTextTime(spreadAwards[10].award_text_time)
         setAwardText(spreadAwards[10].award_text_award);
     }
+    setShowAward(true);
   }
 
 
-  return (
+  return !showAward ? (
     <div className="App">
       <Banner/>
       <div className="calendarsContainer">
@@ -116,13 +134,19 @@ function App() {
           </div>
         </div>
       </div>
-      <Button handleClick={getBreastfeedingAward} text={"submit"}/>
-      <div className="award">
-        <AwardImage src={awardURL} altText={awardText}/>
-        <h1>{awardText}</h1>
+      <div className="submitButton">
+        <Button handleClick={getBreastfeedingAward} text={"submit"}/>
       </div>
+    
     </div>
-  ) 
+  ) : (
+    <div className="award">
+    <AwardImage src={awardURL} altText={awardText}/>
+    <AwardTextTime text={textTime}/>
+    <AwardTextTime text={awardText} />
+
+  </div>
+  )
 }
 
 
