@@ -121,6 +121,11 @@ function App() {
     setShowAward(true);
   }
 
+  function refreshPage(){
+    setShowAward(false)
+    onChange(new Date)
+  }
+
 
   return !showAward ? (
     <div className="App">
@@ -147,10 +152,10 @@ function App() {
     </div>
   ) : (
     <div className="award">
+    <Button handleClick={refreshPage} text={"Back"} className="backButton"/>
     <AwardImage src={awardURL} altText={awardText}/>
     <AwardTextTime text={textTime}/>
     <AwardTextTime text={awardText} />
-
   </div>
   )
 }

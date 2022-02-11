@@ -1,9 +1,47 @@
-.awardImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
-  margin-bottom: 1.5em;
-  width: 50%;
-  height: 50%;
+@media only screen and (max-width: 1125px) {
+  .awardImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 1.5em;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media only screen and (min-width: 1125px) {
+  .awardImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 1.5em;
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media only screen and (min-width: 1385px) {
+  .awardImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 1.5em;
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@media only screen and (min-width: 1645px) {
+  .awardImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 1.5em;
+    width: 20%;
+    height: 20%;
+  }
 }
