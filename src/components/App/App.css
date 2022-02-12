@@ -144,3 +144,11 @@ abbr[title] {
   display: flex;
   justify-content: space-around;
 } */
+
+.award {
+  margin-left: 0% !important;
+}
+
+.awardContent {
+  margin-left: 1em;
+}

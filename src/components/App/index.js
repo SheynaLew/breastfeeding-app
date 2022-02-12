@@ -123,14 +123,13 @@ function App() {
 
   function refreshPage(){
     setShowAward(false)
-    onChange(new Date)
+    onChange(new Date);
   }
 
 
   return !showAward ? (
     <div className="App">
       <Banner/>
-      
         <div className="calendarsContainer">
           <div>
           <Title text="Journey Dates" className="journeyDate"/>
@@ -151,11 +150,14 @@ function App() {
         </div>
     </div>
   ) : (
-    <div className="award">
-    <Button handleClick={refreshPage} text={"Back"} className="backButton"/>
-    <AwardImage src={awardURL} altText={awardText}/>
-    <AwardTextTime text={textTime}/>
-    <AwardTextTime text={awardText} />
+  <div className="award">
+    <Banner className="awardBanner"/>
+    <div className="awardContent">
+      <Button handleClick={refreshPage} text={"Back"} className="backButton"/>
+      <AwardImage src={awardURL} altText={awardText}/>
+      <AwardTextTime text={textTime}/>
+      <AwardTextTime text={awardText} />
+    </div>
   </div>
   )
 }
